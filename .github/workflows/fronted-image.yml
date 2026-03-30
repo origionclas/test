@@ -16,25 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20.19.0"
-          cache: npm
-
-      - name: Configure npm retry
-        run: |
-          npm config set fetch-retries 5
-          npm config set fetch-retry-factor 2
-          npm config set fetch-retry-mintimeout 20000
-          npm config set fetch-retry-maxtimeout 120000
-
-      - name: Install dependencies
-        run: npm ci --no-audit --prefer-offline
-
-      - name: Build
-        run: npm run build
-
       - name: Set up Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -52,5 +33,5 @@ jobs:
           file: ./agent-ui/Dockerfile
           push: true
           tags: |
-            ghcr.io/origionclas/text-frontend:latest
-            ghcr.io/origionclas/text-frontend:${{ github.sha }}
+            ghcr.io/origionclas/test-frontend:latest
+            ghcr.io/origionclas/test-frontend:${{ github.sha }}
