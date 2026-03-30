@@ -35,7 +35,7 @@
     "lint-staged": "^14.0.0",
     "prettier": "^3.0.0",
     "rspack-vue-loader": "^17.4.5",
-    "typescript": "^5.9.3",
+    "typescript": "^5.8.2",
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-components": "^31.0.0",
     "unplugin-vue-router": "^0.19.2",
