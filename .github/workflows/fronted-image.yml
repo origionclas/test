@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          file: ./Dockerfile
+          file: ./dockerfile
           push: true
           tags: |
             ghcr.io/origionclas/test-frontend:latest
