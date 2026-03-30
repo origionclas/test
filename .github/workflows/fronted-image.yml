@@ -48,7 +48,8 @@ jobs:
       - name: Build and Push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: ./agent-ui
+          file: ./agent-ui/Dockerfile
           push: true
           tags: |
             ghcr.io/origionclas/text-frontend:latest
